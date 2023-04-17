@@ -1,5 +1,17 @@
 # Next.js Laravel nginx Fargate 環境テンプレート
 
+# 起動
+
+```
+docker compose up -d
+```
+
+# 停止
+
+```
+docker compose down
+```
+
 ## client
 
 Next.js 13
@@ -8,10 +20,12 @@ node サーバー立てています
 ## api
 
 Laravel 9
+cors.php で allowed_origins の設定が必要です。
 
 ## nginx
 
 fastcgi_pass で api の 9000 番ポート を指定
+ALB で/api/\*の場合こちらのコンテナを指定
 
 ## 必要な環境変数
 
