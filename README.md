@@ -21,6 +21,8 @@ node サーバー立てています
 
 Laravel 9
 cors.php で allowed_origins の設定が必要です。
+デバッグは
+error_log(var_export(変数,true))
 
 ## nginx
 
